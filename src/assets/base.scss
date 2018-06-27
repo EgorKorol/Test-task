@@ -1,0 +1,111 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	overscroll-behavior: none;
+}
+
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a, button {
+	transition: all .2s;
+	color: inherit;
+	font-size: inherit;
+}
+
+a[href^="tel"] {
+	white-space: nowrap;
+	pointer-events: none;
+	text-decoration: none;
+}
+
+@media (max-width: 960px) {
+	a[href^="tel"] {
+		pointer-events: auto;
+		text-decoration: underline;
+	}
+}
+
+button {
+	cursor: pointer;
+}
+
+[disabled] {
+	cursor: not-allowed;
+}
+
+input, textarea, select {
+	transition: .2s;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 650px;
+	position: relative;
+	overflow: hidden;
+}
+
+input.invalid {
+	border: 1px solid red;
+	box-shadow: 0 0 5px red;
+	animation-name: invalid;
+	animation-duration: .6s;
+}
+
+input:required:valid {
+	border: 1px solid green;
+}
+
+@keyframes invalid {
+	0% {
+		transform: translateX(-3px);
+	}
+	10% {
+		transform: translateX(3px);
+	}
+	20% {
+		transform: translateX(-3px);
+	}
+	30% {
+		transform: translateX(3px);
+	}
+	40% {
+		transform: translateX(-3px);
+	}
+	50% {
+		transform: translateX(3px);
+	}
+	60% {
+		transform: translateX(-3px);
+	}
+	70% {
+		transform: translateX(3px);
+	}
+	80% {
+		transform: translateX(-3px);
+	}
+	90% {
+		transform: translateX(3px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
