@@ -1,11 +1,15 @@
 <template lang='pug'>
 	#app
 		.wrapper
+			header-page
 </template>
 
 <script>
 export default {
-	name: 'App'
+	name: 'App',
+	components: {
+		HeaderPage: () => import('@/components/Header')
+	}
 }
 </script>
 
