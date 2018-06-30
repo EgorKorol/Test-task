@@ -1,24 +1,19 @@
 <template lang="pug">
 	header.header
-		.header__logo
-			a.header__logo-link(href='#')
-				img.header__logo-img(src='@/assets/img/Header/logo.png')
-				span.header__logo-text Open Circles
-		.header__content-box
-			.header__menu-btn
-				button.hamburger(type='button', @click='')
-					span.hamburger__line
-			.header__content
-				.header__user-info
-					.header__user-title Users List
-					.header__user-number 874 users
-				.header__search
-					input.header__search-input(type='search')
-				button.header__table-filter(type='button', @click='') Table filter
-				.header__user-action
-					button.header__user-btn(type='button', @click='')
-						span.header__user-name Dale McCormick
-						img.header__user-arrow(src='@/assets/img/Header/arrow.png')
+		.header__menu-btn
+			button.hamburger(type='button', @click='')
+				span.hamburger__line
+		.header__content
+			.header__user-info
+				.header__user-title Users List
+				.header__user-number 874 users
+			.header__search
+				input.header__search-input(type='search')
+			button.header__table-filter(type='button', @click='') Table filter
+			.header__user-action
+				button.header__user-btn(type='button', @click='')
+					span.header__user-name Dale McCormick
+					img.header__user-arrow(src='@/assets/img/Header/arrow.png')
 </template>
 
 <script>
@@ -29,30 +24,6 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-	display: flex;
-}
-.header__logo {
-	max-width: 240px;
-	width: 100%;
-	background-color: var(--brandBlueLigten);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 20px 15px;
-}
-.header__logo-link {
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-}
-.header__logo-img {
-	margin-right: 20px;
-}
-.header__logo-text {
-	color: #ffffff;
-	font-size: 18px;
-}
-.header__content-box {
 	display: flex;
 	align-items: center;
 	width: 100%;
