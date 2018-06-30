@@ -26,7 +26,6 @@ export default {
 .header {
 	display: flex;
 	align-items: center;
-	width: 100%;
 	background-color: var(--brandOrange);
 }
 .header__menu-btn {
