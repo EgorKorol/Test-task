@@ -74,7 +74,7 @@
 						li.modal-edit__footer-btn
 							button.edit-form__btn(type='button', :disabled='isDisable', @click='') Revoke access
 						li.modal-edit__footer-btn
-							button.edit-form__btn(type='button', @click='') Save
+							button.edit-form__btn(type='button', @click='saveClient') Save
 </template>
 
 <script>
@@ -243,6 +243,14 @@ export default {
 		},
 		closeEditModal () {
 			this.isShowModal = false
+		},
+		saveClient () {
+			for (let i = 0; i < this.clients.length; i++) {
+				if (this.clients[i].id === this.selectedClient.id) {
+					this.clients[i] = this.selectedClient
+					this.isShowModal = false
+				}
+			}
 		}
 	}
 }
@@ -253,6 +261,7 @@ export default {
 	background-color: var(--bodyColor);
 	padding: 25px;
 	overflow-x: auto;
+	min-height: calc(100vh - 90px);
 }
 .table {
 	box-shadow: 0 1px 8px rgba(229, 229, 235, 0.5);
