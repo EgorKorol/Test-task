@@ -1,7 +1,7 @@
 <template lang="pug">
 	header.header
 		.header__menu-btn
-			button.hamburger(type='button', @click='')
+			button.hamburger(type='button', @click="$emit('toggleMenu')")
 				span.hamburger__line
 		.header__content
 			.header__user-info
@@ -27,6 +27,7 @@ export default {
 	display: flex;
 	align-items: center;
 	background-color: var(--brandOrange);
+	max-height: 90px;
 }
 .header__menu-btn {
 	padding: 20px 15px;
@@ -39,7 +40,7 @@ export default {
 	height: 24px;
 	padding: 5px;
 	--burgerColor: #242430;
-	&:hover, &:active, &:focus {
+	&:hover {
 		--burgerColor: #fff;
 	}
 }
