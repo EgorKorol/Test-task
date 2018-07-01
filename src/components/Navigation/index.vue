@@ -72,11 +72,6 @@ export default {
 <style lang="scss" scoped>
 .aside {
 	background-color: var(--brandBlue);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 240px;
-	height: 100%;
 }
 .aside__logo {
 	width: 100%;
@@ -127,6 +122,7 @@ export default {
 .nav__img {
 	filter: invert(100%) brightness(200%);
 	margin-right: 20px;
+	min-width: 20px;
 }
 .nav__text {
 	font-family: 'SFUID', sans-serif;
